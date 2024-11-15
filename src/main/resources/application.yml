@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sharathjee/config-server-repo
+          cloneOnStart: true
+
+server:
+    port: 8888
+
+
+#Verify any repository issue in service startup
+
+#Disable security of the Management endpoint
+management:
+    security:
+      enabled: false
